@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/pages/weather/weather_model/weather_cubit.dart';
@@ -41,6 +42,26 @@ class WeatherPage extends StatelessWidget {
               );
             },
             internetError: (_) {
+              Timer.run(() {
+                showDialog(
+                  context: context,
+                  builder: (_) => AlertDialog(
+                    title: const Text(Strings.internetConnectionSnack),
+                    content: const Text(Strings.checkYourInternet),
+                    actions: [
+                      TextButton(
+                        child: const Text(
+                          "OK",
+                          style: TextStyle(color: Colors.orange),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      )
+                    ],
+                  ),
+                );
+              });
               return const Center(
                   child: Text(
                 Strings.internetConnection,

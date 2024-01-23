@@ -8,4 +8,6 @@ class Strings {
   static const String choseCity = 'Выберите интересующий вас город';
   static const String acceptButton = 'Узнать погоду';
   static const String internetConnection = 'Интернет соединение отсутствует';
+  static const String internetConnectionSnack = 'Проблемы с интернетом';
+  static const String checkYourInternet = 'Провеьте подключение к интернету и попробуйте еще раз';
 }

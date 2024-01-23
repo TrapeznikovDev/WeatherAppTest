@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Выберите интересующий вас город',
+              const Text(Strings.choseCity,
                   style: TextStyle(fontSize: 18)),
               DropdownButton(
                 value: dropdownValue,
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                   width: 300,
                   child: const Center(
                       child: Text(
-                    'Узнать погоду',
+                    Strings.acceptButton,
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
                 ),

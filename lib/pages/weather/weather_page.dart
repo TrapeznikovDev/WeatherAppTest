@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/pages/weather/weather_model/weather_cubit.dart';
+import 'package:weather_app/shared/strings.dart';
 
 class WeatherPage extends StatelessWidget {
   final String cityName;
@@ -42,7 +43,7 @@ class WeatherPage extends StatelessWidget {
             internetError: (_) {
               return const Center(
                   child: Text(
-                'Интернет соединение отсутствует',
+                Strings.internetConnection,
                 style: TextStyle(color: Colors.red),
               ));
             },
